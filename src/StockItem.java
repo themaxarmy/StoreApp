@@ -3,11 +3,13 @@ public class StockItem {
     final String name;
     double price;
     int totalStock = 0;
+    double salesTax;
 
     public StockItem(String setStockNumber, String setName, double setPrice){
         stockNumber = setStockNumber;
         name = setName;
         price = setPrice;
+        salesTax = 10;
     }
 
     public void setPrice(double setPrice){
@@ -35,5 +37,9 @@ public class StockItem {
 
     public double calculateTotalPrice(){
         return price * totalStock;
+    }
+
+    public void setSalesTax (double setSalesTax){
+        salesTax = setSalesTax;
     }
 }
